@@ -8,11 +8,11 @@
 		<version>2.6.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.cs5500</groupId>
-	<artifactId>mars_rover</artifactId>
+	<groupId>com.cs5500group10</groupId>
+	<artifactId>MarsRoverAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mars_rover</name>
-	<description>Nasa Mars</description>
+	<name>MarsRoverAPI</name>
+	<description>Mars Rover API Web Application</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -34,6 +34,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
