@@ -6,8 +6,14 @@ import org.springframework.web.client.RestTemplate;
 
 import com.cs5500group10.response.MarsRoverApiResponse;
 
+/**
+ * The Class MarsRoverApiTest.
+ */
 public class MarsRoverApiTest {
 
+	/**
+	 * Small test to see if it returns correct JSON response.
+	 */
 	@Test
 	public void smallTest() {
 		RestTemplate rt = new RestTemplate();
