@@ -1,10 +1,10 @@
-package com.cs5500.mars_rover;
+package com.cs5500group10;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MarsRoverApplicationTests {
+class MarsRoverApiApplicationTests {
 
 	@Test
 	void contextLoads() {
