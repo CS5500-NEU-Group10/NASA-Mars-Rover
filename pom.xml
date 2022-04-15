@@ -11,8 +11,10 @@
 	<groupId>com.cs5500group10</groupId>
 	<artifactId>MarsRoverAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MarsRoverAPI</name>
-	<description>Mars Rover API Web Application</description>
+	<packaging>war</packaging>
+	<name>MarsRoverApi</name>
+	<description>Mars Rover Api Web Application</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -43,6 +45,24 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.8.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
