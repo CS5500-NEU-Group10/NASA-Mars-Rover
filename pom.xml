@@ -11,8 +11,10 @@
 	<groupId>com.cs5500group10</groupId>
 	<artifactId>MarsRoverAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MarsRoverAPI</name>
-	<description>Mars Rover API Web Application</description>
+	<packaging>war</packaging>
+	<name>MarsRoverApi</name>
+	<description>Mars Rover Api Web Application</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
