@@ -20,37 +20,37 @@ We wanted to work with Spring Boot to utilize its production-grade features to c
 ## backend components
 
 ### cs5500group10
-ServeletInitializer.java
-MarsRoverApplication.java
+ServeletInitializer.java__
+MarsRoverApplication.java__
 
 ### cs5500group10.dto
-HomeDto.java
+HomeDto.java__
 
 ### Preference Repository (old)
 
 ### cs5500group.response 
 getters and setters for fields (cameras, rovers)
 
-MarsCamera.java
-MarsPhoto.java
-MarsRover.java
-MarsRoverApiResponse.java
+MarsCamera.java__
+MarsPhoto.java__
+MarsRover.java__
+MarsRoverApiResponse.java__
 
 ### cs5500group10.service
 
-MarsRoverApiService.java: stores the NASA Mars Rover API key and dynamically gets the request for our search
+MarsRoverApiService.java: stores the NASA Mars Rover API key and dynamically gets the request for our search__
 
 ### cs5500group10.web
 
-HomeController.java: Home Controller that listens to requests and persists models
+HomeController.java: Home Controller that listens to requests and persists models__
 
 ### src/main/resources
 
-index.html: (old) new index.html with react.js
+index.html: (old) new index.html with react.js__
 
 ### application properties:
 
-JUnit test cases
+JUnit test cases__
 
 ## MySQL Database
 
@@ -76,21 +76,21 @@ JS Docs included
 
 ### Components:
 Navbar.js: Navigation menu with Home, Favorites, menu of the rovers (introduction pages), and login
-Curiosity.js: info page of Curiosity Rover
-Spirit.js: info page of Spirit Rover
-Opportunity.js: info page of Opportunity Rover
-orbit.js: landing page with 3D
-RoverCams.js: Hash Map of rovers with their corresponding cameras
-SelectCamera.js: Camera selection component of the home page
-SelectRover.js: Rover selection component of the home page
-SelectSol.js: input form component of Sol selection in the home page
+Curiosity.js: info page of Curiosity Rover__
+Spirit.js: info page of Spirit Rover__
+Opportunity.js: info page of Opportunity Rover__
+orbit.js: landing page with 3D__
+RoverCams.js: Hash Map of rovers with their corresponding cameras__
+SelectCamera.js: Camera selection component of the home page__
+SelectRover.js: Rover selection component of the home page__
+SelectSol.js: input form component of Sol selection in the home page__
 
 ### Pages:
-Fave.js: the favorited list of users
-UserAccount.js: login page
-Main.js: main page(home) of the website
-Filter.js: parent component of SelectRover.js and SelectCamera.js
-Home.js: parent component of RenderImg.js
+Fave.js: the favorited list of users__
+UserAccount.js: login page__
+Main.js: main page(home) of the website__
+Filter.js: parent component of SelectRover.js and SelectCamera.js__
+Home.js: parent component of RenderImg.js__
 
 
 ## Bootstrap 
