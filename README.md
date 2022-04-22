@@ -75,7 +75,7 @@ Frontend with React Hooks since team is more unfamiliar with Thymeleaf.
 JS Docs included
 
 ### Components:
-Navbar.js: Navigation menu with Home, Favorites, menu of the rovers (introduction pages), and login
+Navbar.js: Navigation menu with Home, Favorites, menu of the rovers (introduction pages), and login <br />
 Curiosity.js: info page of Curiosity Rover <br />
 Spirit.js: info page of Spirit Rover__
 Opportunity.js: info page of Opportunity Rover__
