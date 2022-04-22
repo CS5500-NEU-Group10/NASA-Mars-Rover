@@ -105,7 +105,15 @@ Bootstrap framework and CSS is used for frontend rendering and screen responsive
 The main page shows the selection for users to choose the Mars rovers (can choose all three or individual rovers) and the cameras. Since not all rovers have the same cameras, only the cameras that a rover has will light up. Sol Day selection is the Mars day seleciton. If users don't input the Sol day, a default value of the 1000th Sol day will be supplied. 
  <br />
   <br />
-![Screen Shot 2022-04-18 at 3 37 25 PM](https://user-images.githubusercontent.com/101501539/163888286-4aa13958-2717-4ff8-9c09-225bec9a2702.png) <br />
-After users select their choices and hit submit, the page calls the NASA Mars Rover photo API and filters the option to render the photos that fit the selection conditions. Users may choose to save the images in their own account album by pressing the heart button.  <br />
-![Screen Shot 2022-04-18 at 3 37 48 PM](https://user-images.githubusercontent.com/101501539/163888311-897de5e5-6f68-469d-9e40-8881a62b2c0b.png) <br />
-The navbar menu also has three menu options that are the description of each rovers, namely the Opportunity Rover, the Curiosity Rover, and the Spirit Rover. This gives users a gist of the rovers' missions and more information about them. <br />
+![Screen Shot 2022-04-18 at 3 37 25 PM](https://user-images.githubusercontent.com/101501539/163888286-4aa13958-2717-4ff8-9c09-225bec9a2702.png) 
+ <br /> 
+  <br />
+After users select their choices and hit submit, the page calls the NASA Mars Rover photo API and filters the option to render the photos that fit the selection conditions. Users may choose to save the images in their own account album by pressing the heart button.  
+<br />
+ <br />
+![Screen Shot 2022-04-18 at 3 37 48 PM](https://user-images.githubusercontent.com/101501539/163888311-897de5e5-6f68-469d-9e40-8881a62b2c0b.png) 
+<br />
+ <br />
+The navbar menu also has three menu options that are the description of each rovers, namely the Opportunity Rover, the Curiosity Rover, and the Spirit Rover. This gives users a gist of the rovers' missions and more information about them. 
+<br />
+ <br />
