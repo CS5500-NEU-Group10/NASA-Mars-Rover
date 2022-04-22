@@ -60,9 +60,12 @@ The application uses Spring Data JPA for CRUD funcationalities in the database.
 
 The project has unit tests in the developmental phase as part of the testing in the Scrum process. 
 
+## Unit Test for React.js with Chai, Mocha, Enzyme
+
+
 ## E2E Test for React.js with Cypress
 
-E2E test conducted with cypress
+E2E test conducted with Cypress in the Cypress folder
 
 # On the Frontend
 
