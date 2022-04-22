@@ -20,8 +20,8 @@ We wanted to work with Spring Boot to utilize its production-grade features to c
 ## backend components
 
 ### cs5500group10
-ServeletInitializer.java
-MarsRoverApplication.java
+ServeletInitializer.java <br />
+MarsRoverApplication.java <br />
 
 ### cs5500group10.dto
 HomeDto.java
@@ -31,10 +31,10 @@ HomeDto.java
 ### cs5500group.response 
 getters and setters for fields (cameras, rovers)
 
-MarsCamera.java
-MarsPhoto.java
-MarsRover.java
-MarsRoverApiResponse.java
+MarsCamera.java <br />
+MarsPhoto.java <br />
+MarsRover.java <br />
+MarsRoverApiResponse.java <br />
 
 ### cs5500group10.service
 
@@ -77,20 +77,20 @@ JS Docs included
 ### Components:
 Navbar.js: Navigation menu with Home, Favorites, menu of the rovers (introduction pages), and login <br />
 Curiosity.js: info page of Curiosity Rover <br />
-Spirit.js: info page of Spirit Rover__
-Opportunity.js: info page of Opportunity Rover__
-orbit.js: landing page with 3D__
-RoverCams.js: Hash Map of rovers with their corresponding cameras__
-SelectCamera.js: Camera selection component of the home page__
-SelectRover.js: Rover selection component of the home page__
-SelectSol.js: input form component of Sol selection in the home page__
+Spirit.js: info page of Spirit Rover <br />
+Opportunity.js: info page of Opportunity Rover <br />
+orbit.js: landing page with 3D <br />
+RoverCams.js: Hash Map of rovers with their corresponding cameras <br />
+SelectCamera.js: Camera selection component of the home page <br />
+SelectRover.js: Rover selection component of the home page <br />
+SelectSol.js: input form component of Sol selection in the home page <br />
 
 ### Pages:
-Fave.js: the favorited list of users__
-UserAccount.js: login page__
-Main.js: main page(home) of the website__
-Filter.js: parent component of SelectRover.js and SelectCamera.js__
-Home.js: parent component of RenderImg.js__
+Fave.js: the favorited list of users <br />
+UserAccount.js: login page <br />
+Main.js: main page(home) of the website <br />
+Filter.js: parent component of SelectRover.js and SelectCamera.js <br />
+Home.js: parent component of RenderImg.js <br />
 
 
 ## Bootstrap 
@@ -101,5 +101,8 @@ Bootstrap framework and CSS is used for frontend rendering and screen responsive
 ### Digital Wireframe:
 
 ![Screen Shot 2022-04-18 at 3 37 04 PM](https://user-images.githubusercontent.com/101501539/163888253-0433ff41-9c0e-49d2-bdff-bfb175310ea6.png)
+The main page shows the selection for users to choose the Mars rovers (can choose all three or individual rovers) and the cameras. Since not all rovers have the same cameras, only the cameras that a rover has will light up. Sol Day selection is the Mars day seleciton. If users don't input the Sol day, a default value of the 1000th Sol day will be supplied.
 ![Screen Shot 2022-04-18 at 3 37 25 PM](https://user-images.githubusercontent.com/101501539/163888286-4aa13958-2717-4ff8-9c09-225bec9a2702.png)
+After users select their choices and hit submit, the page calls the NASA Mars Rover photo API and filters the option to render the photos that fit the selection conditions. Users may choose to save the images in their own account album by pressing the heart button. 
 ![Screen Shot 2022-04-18 at 3 37 48 PM](https://user-images.githubusercontent.com/101501539/163888311-897de5e5-6f68-469d-9e40-8881a62b2c0b.png)
+The navbar menu also has three menu options that are the description of each rovers, namely the Opportunity Rover, the Curiosity Rover, and the Spirit Rover. This gives users a gist of the rovers' missions and more information about them.
