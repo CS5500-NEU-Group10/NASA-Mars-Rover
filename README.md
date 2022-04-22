@@ -20,25 +20,25 @@ We wanted to work with Spring Boot to utilize its production-grade features to c
 ## backend components
 
 ### cs5500group10
-ServeletInitializer.java__
-MarsRoverApplication.java__
+ServeletInitializer.java
+MarsRoverApplication.java
 
 ### cs5500group10.dto
-HomeDto.java__
+HomeDto.java
 
 ### Preference Repository (old)
 
 ### cs5500group.response 
 getters and setters for fields (cameras, rovers)
 
-MarsCamera.java__
-MarsPhoto.java__
-MarsRover.java__
-MarsRoverApiResponse.java__
+MarsCamera.java
+MarsPhoto.java
+MarsRover.java
+MarsRoverApiResponse.java
 
 ### cs5500group10.service
 
-MarsRoverApiService.java: stores the NASA Mars Rover API key and dynamically gets the request for our search__
+MarsRoverApiService.java: stores the NASA Mars Rover API key and dynamically gets the request for our search
 
 ### cs5500group10.web
 
@@ -46,11 +46,11 @@ HomeController.java: Home Controller that listens to requests and persists model
 
 ### src/main/resources
 
-index.html: (old) new index.html with react.js__
+index.html: (old) new index.html with react.js
 
 ### application properties:
 
-JUnit test cases__
+JUnit test cases
 
 ## MySQL Database
 
@@ -76,7 +76,7 @@ JS Docs included
 
 ### Components:
 Navbar.js: Navigation menu with Home, Favorites, menu of the rovers (introduction pages), and login
-Curiosity.js: info page of Curiosity Rover__
+Curiosity.js: info page of Curiosity Rover <br />
 Spirit.js: info page of Spirit Rover__
 Opportunity.js: info page of Opportunity Rover__
 orbit.js: landing page with 3D__
