@@ -71,6 +71,11 @@ const Navbar = ({ faveIdToImage, setFaveIdToImage, handleSubmit }) => {
               <button className="main-btn"> Log In </button>
             </Link>
           </div>
+          <div className="btn-login">
+            <Link to="/SignUp" style={{ textDecoration: "none" }}>
+              <button className="main-btn"> Sign Up </button>
+            </Link>
+          </div>
         </div>
       </nav>
     </div>

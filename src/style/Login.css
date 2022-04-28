@@ -162,5 +162,62 @@ button:focus {
   cursor: pointer;
 }
 
+.foodname-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: calc(100% - 32px);
+  background: transparent;
+  color: #fff;
+}
+
+.login-button {
+  padding: 8px 16px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+  font-size: larger;
+}
+
+.account-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 200px;
+  background: #161a2b;
+  text-align: center;
+  margin: 128px auto;
+  padding-left: 64px;
+  padding-right: 64px;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+.food-form {
+  margin-bottom: 32px;
+}
+
+.web-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 1080px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
 
 /*# sourceMappingURL=Login.css.map */

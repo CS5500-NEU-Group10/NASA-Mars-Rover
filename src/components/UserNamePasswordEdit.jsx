@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// const bcrypt = require("bcryptjs");
 
 function UserNamePasswordEdit(props) {
   const [inputUserName, setInputUserName] = useState("");
@@ -28,17 +27,17 @@ function UserNamePasswordEdit(props) {
       return;
     }
 
-    // let salt = bcrypt.genSaltSync(10);
-    // let hash = bcrypt.hashSync(accountInfoObj.password, salt);
-    // accountInfoObj.password = hash;
-
+    let registerUrl =
+      "/api/create_user?user_id=" +
+      accountInfoObj.userName +
+      "&password=" +
+      accountInfoObj.password;
     alert("Registration Completed!");
-    fetch("/api/create_user", {
+    fetch(registerUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(accountInfoObj),
     });
   };
 
@@ -53,28 +52,25 @@ function UserNamePasswordEdit(props) {
       return;
     }
 
-    let result = await fetch("/api/login", {
+    let loginUrl =
+      "/api/login?user_id=" +
+      accountInfoObj.userName +
+      "&password=" +
+      accountInfoObj.password;
+    let result = await fetch(loginUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userName: accountInfoObj.userName }),
     });
-    let resultObj = await result.json();
-    let isOk = false;
-    if (resultObj.length !== 0) {
-      isOk = accountInfoObj.password === resultObj[0].password ? true : false;
-    } else {
-      alert("User Not Found!");
-      return;
-    }
+    let isOk = await result.json();
     if (isOk) {
       localStorage.clear();
       localStorage.setItem("user", accountInfoObj.userName);
       alert("Successfully Logged in!");
-      navigate("/photo");
+      navigate("/Home");
     } else {
-      alert("Wrong Password!");
+      alert("Login Failed!");
     }
   };
 
@@ -103,7 +99,7 @@ function UserNamePasswordEdit(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="photo-form">
+    <form onSubmit={handleSubmit} className="food-form">
       <>
         <input
           placeholder="Enter User Name Here"
