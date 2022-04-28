@@ -109,6 +109,7 @@ function UserNamePasswordEdit(props) {
           className="foodname-input"
         />
         <input
+          type="password"
           placeholder="Enter Password Here"
           value={inputPassword}
           onChange={handlePasswordChange}
