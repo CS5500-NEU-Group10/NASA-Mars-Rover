@@ -28,7 +28,7 @@ function UserNamePasswordEdit(props) {
     }
 
     let registerUrl =
-      "/api/create_user?user_id=" +
+      "http://localhost:8080/api/create_user?user_id=" +
       accountInfoObj.userName +
       "&password=" +
       accountInfoObj.password;
