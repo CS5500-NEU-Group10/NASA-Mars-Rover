@@ -16,7 +16,7 @@ public class FavoriteApiController {
 
     @PostMapping("/save_favorite")
     @ResponseBody
-    public boolean saveFavorites(@RequestParam("user_id") String userId, @RequestParam("data") String data) {
+    public boolean saveFavorites(@RequestParam("user_id") String userId, @RequestBody String data) {
         if (userId != null && data != null) {
             if (favoriteApiService.existsByUserId(userId)) {
                 // existing user
