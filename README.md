@@ -16,6 +16,9 @@ During the project we created a first prototype and then continued tweaking and 
 ## Java Springboot
 
 We wanted to work with Spring Boot to utilize its production-grade features to create a full, stand-alone RESTful web application. We have chosen the MVC architecture as part of the framework to help handle HTTP requests and responses. 
+Backend is running on localhost 8080 powered by Apache Tomcat.
+To run the backend, import project after git cloning or downloaing zip, make sure Maven dependencies are updated, MySQL workbench is connected and run Springboot project. 
+
 
 ## backend components
 
@@ -26,15 +29,7 @@ MarsRoverApplication.java <br />
 ### cs5500group10.dto
 HomeDto.java
 
-### Preference Repository (old)
-
-### cs5500group.response 
-getters and setters for fields (cameras, rovers)
-
-MarsCamera.java <br />
-MarsPhoto.java <br />
-MarsRover.java <br />
-MarsRoverApiResponse.java <br />
+### Preference Repository 
 
 ### cs5500group10.service
 
@@ -42,7 +37,7 @@ MarsRoverApiService.java: stores the NASA Mars Rover API key and dynamically get
 
 ### cs5500group10.web
 
-HomeController.java: Home Controller that listens to requests and persists models__
+HomeController.java: Home Controller that listens to requests and persists models
 
 ### src/main/resources
 
