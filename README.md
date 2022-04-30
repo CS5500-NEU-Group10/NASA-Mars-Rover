@@ -86,13 +86,17 @@ RoverCams.js: Hash Map of rovers with their corresponding cameras <br />
 SelectCamera.js: Camera selection component of the home page <br />
 SelectRover.js: Rover selection component of the home page <br />
 SelectSol.js: input form component of Sol selection in the home page <br />
+mars.js: Landing pace with 3D components <br />
+UserNamePasswordEdit: Login and signup implementation, connects to backend.
 
 ### Pages:
 Fave.js: the favorited list of users <br />
 UserAccount.js: login page <br />
+SignUp.js: signup page <br />
 Main.js: main page(home) of the website <br />
 Filter.js: parent component of SelectRover.js and SelectCamera.js <br />
 Home.js: parent component of RenderImg.js <br />
+App.js: Parent component of all components. 
 
 
 ## Bootstrap 
