@@ -4,8 +4,10 @@ import com.cs5500group10.dto.PreferenceApiDto;
 import com.cs5500group10.repository.PreferenceApiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class PreferenceApiService {
 
     @Autowired
