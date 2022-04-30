@@ -28,7 +28,7 @@ function UserNamePasswordEdit(props) {
     }
 
     let registerUrl =
-      "/api/create_user?user_id=" +
+      "http://localhost:8080/api/create_user?user_id=" +
       accountInfoObj.userName +
       "&password=" +
       accountInfoObj.password;
@@ -109,6 +109,7 @@ function UserNamePasswordEdit(props) {
           className="foodname-input"
         />
         <input
+          type="password"
           placeholder="Enter Password Here"
           value={inputPassword}
           onChange={handlePasswordChange}

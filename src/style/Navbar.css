@@ -55,7 +55,7 @@
 
 .main-btn {background-image: linear-gradient(to right, #240146 0%, #430056  51%, #0e0027  100%)}
 .main-btn {
-   margin: 10px;
+   /* margin: 2px; */
    padding: 5px 25px;
    text-align: center;
    text-transform: uppercase;
@@ -65,6 +65,7 @@
    box-shadow: 0 0 5px #eee;
    border-radius: 10px;
    display: block;
+   width: 110px;
  }
 
  .main-btn:hover {

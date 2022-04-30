@@ -169,6 +169,10 @@ function SelectCamera({
           </div>
           {/* handleSolDay={handleSolDay} */}
           <SelectSol />
+          <div className="preferences">
+            <input type="checkbox" className="preferences-checkbox" />
+            &nbsp;&nbsp;Save Preferences
+          </div>
           <div className="submitButton">
             <button type="submit" className="btn btn-primary" id="submitBtn">
               Submit
