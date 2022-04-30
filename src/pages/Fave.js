@@ -1,15 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "../style/Render.css";
 import { RiHeartLine, RiHeartFill } from "react-icons/ri";
 // import { useLocation } from "react-router-dom";
 
 function Fave({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
-  // let location = useLocation();
+  let user = localStorage.getItem("user");
   console.log("location in fav", setFaveIdToImage);
   // let faveIdToImage = location.state["faveIdToImage"];
-  const imagesArr = Array.from(faveIdToImage.values());
+  let imagesArr = Array.from(faveIdToImage.values());
   console.log("ImagesARR", imagesArr);
+
+  // Recover Map object from string
+  // Corresponding to the mapToString function below
+  function stringToMap(mapString) {
+    let mapObj = JSON.parse(mapString);
+    const tempMap = new Map();
+    for (let key in mapObj) {
+      let value = mapObj[key];
+      tempMap.set(Number(key), JSON.parse(value));
+    }
+    return tempMap;
+  }
+
+  async function fetchFaveData() {
+    const result = await fetch(`/api/get_favorite/${user}`, {
+      method: "GET",
+    });
+    let itemsObj = await result.json();
+    let faveMap = stringToMap(itemsObj.data);
+
+    return faveMap;
+  }
+
+  useEffect(() => {
+    fetchFaveData().then((faveItems) => {
+      setFaveIdToImage(faveItems);
+    });
+  }, []);
 
   // /**
   //  * function that displays the returned images in horizontal pairs
