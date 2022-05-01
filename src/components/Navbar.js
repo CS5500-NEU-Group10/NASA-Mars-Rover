@@ -8,7 +8,7 @@ const Navbar = ({ faveIdToImage, setFaveIdToImage, handleSubmit }) => {
   console.log(faveIdToImage, setFaveIdToImage);
 
   return (
-    <div className="Navbar">
+    <div className="Navbar" data-testid="navbar-test">
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container">
           <Link to="/" style={{ textDecoration: "none" }}>

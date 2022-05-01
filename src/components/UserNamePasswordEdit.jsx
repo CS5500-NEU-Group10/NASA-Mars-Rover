@@ -107,6 +107,7 @@ function UserNamePasswordEdit(props) {
           onChange={handleUserNameChange}
           name="text"
           className="foodname-input"
+          data-testid="user-input-test"
         />
         <input
           type="password"

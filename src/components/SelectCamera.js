@@ -176,7 +176,12 @@ function SelectCamera({
             &nbsp;&nbsp;Save Preferences
           </div>
           <div className="submitButton">
-            <button type="submit" className="btn btn-primary" id="submitBtn">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              id="submitBtn"
+              data-testid="submit-test"
+            >
               Submit
             </button>
           </div>

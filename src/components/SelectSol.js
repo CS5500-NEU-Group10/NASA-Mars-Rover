@@ -14,6 +14,7 @@ function SelectSol() {
         className="form-control"
         min="0"
         name="sol"
+        data-testid="sol-input"
         // onInput={handleSolDay}
       />
       <div className="default">If not entered default is 1000 Sol</div>

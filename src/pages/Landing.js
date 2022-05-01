@@ -7,7 +7,7 @@ import { Suspense } from "react";
 
 function Landing() {
   return (
-    <div id="canvas-container">
+    <div id="canvas-container" data-testid="landing-test">
       <Canvas>
         <Stars />
         <Plane rotation-x={Math.PI / 2} args={[100, 100, 4, 4]}></Plane>

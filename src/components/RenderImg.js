@@ -53,7 +53,12 @@ function RenderImg({ addFave, removeFave, imgs, faveIdToImage }) {
               <div className="card container" id="cardimage" key={roverpic.id}>
                 <div className="card-body">
                   <h5 className="card-title"> Rover: {roverpic.rover.name}</h5>
-                  <img className="imgs" src={roverpic.img_src} alt="" />
+                  <img
+                    className="imgs"
+                    src={roverpic.img_src}
+                    alt=""
+                    data-testid="render-test"
+                  />
                   <p className="card-text">
                     Sol: {roverpic.sol}
                     <br />
