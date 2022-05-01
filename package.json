@@ -10,6 +10,8 @@
     "@testing-library/react": "^13.1.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "bcrypt": "^5.0.1",
     "cypress": "^9.6.0",
     "react": "^18.0.0",
@@ -23,13 +25,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress open ",
+    "test": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:cypress/recommended"
     ]
   },
   "browserslist": {
@@ -45,7 +48,18 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.13.0",
-    "eslint-plugin-react": "^7.29.4"
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "babel-jest": "^28.0.3",
+    "eslint": "^8.14.0",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-react": "^7.29.4",
+    "jest": "^28.0.3",
+    "react-test-renderer": "^18.1.0"
+  },
+  "jest": {
+    "verbose": true
+  
   }
 }

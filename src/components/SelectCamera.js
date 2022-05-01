@@ -123,6 +123,7 @@ function SelectCamera({
                       className="form-check-input"
                       type="checkbox"
                       onChange={handleSelectOption}
+                      id="navcam-id"
                       name="NAVCAM"
                       disabled={
                         !isCButtonActive && !isOButtonActive && !isSButtonActive
@@ -140,6 +141,7 @@ function SelectCamera({
                       type="checkbox"
                       onChange={handleSelectOption}
                       name="PANCAM"
+                      id="pancam-id"
                       disabled={!isOButtonActive && !isSButtonActive}
                     />
                     <label className="form-check-label" htmlFor="cameraPancam1">

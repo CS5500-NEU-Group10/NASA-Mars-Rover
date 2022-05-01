@@ -34,7 +34,7 @@ function SelectRover({
             <div className="col-sm">
               <button
                 type="button"
-                className="btn btn-primary btn-lg btn-block"
+                className="btn btn-primary btn-lg btn-block O-button"
                 aria-pressed="true"
                 id={`${isOButtonActive ? "OButtonActive" : ""}`}
                 onClick={handleOButton}
@@ -45,7 +45,7 @@ function SelectRover({
             <div className="col-sm">
               <button
                 type="button"
-                className="btn btn-primary btn-lg btn-block"
+                className="btn btn-primary btn-lg btn-block S-button"
                 aria-pressed="true"
                 id={`${isSButtonActive ? "SButtonActive" : ""}`}
                 onClick={handleSButton}
