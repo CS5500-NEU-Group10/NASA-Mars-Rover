@@ -16,9 +16,14 @@ function App() {
   let user = localStorage.getItem("user");
   let [faveIdToImage, setFaveIdToImage] = useState(new Map());
 
-  // Convert Map object into string
-  // Corresponding to the stringToMap function below
+  /**
+   *  Convert Map object into string
+   Corresponding to the stringToMap function below
+   * @param {Map} map object
+   * @returns JSON object
+   */
   function mapToString(map) {
+    //{id:obj,}
     let mapObj = {};
     map.forEach((v, k) => {
       mapObj[k] = JSON.stringify(v);
@@ -26,6 +31,11 @@ function App() {
     let mapString = JSON.stringify(mapObj);
     return mapString;
   }
+  /**
+   * updates favorite to backend
+   * @param {Number} user_id
+   * @param {Map} favoriteMap
+   */
   function updateBackend(user_id, favoriteMap) {
     // Update to the backend
     const tempMapString = mapToString(favoriteMap);
@@ -37,12 +47,21 @@ function App() {
       body: tempMapString,
     });
   }
+  /**
+   * adds favorite images to faveIdToImage map, sets map and updates backend
+   * @param {Object} obj
+   */
   const addFave = (obj) => {
     const tempMap = new Map(faveIdToImage);
     tempMap.set(obj.id, Object.assign({}, obj));
     setFaveIdToImage(tempMap);
     updateBackend(user, tempMap);
   };
+
+  /**
+   * removes favorite from faveIdToImage map and updates backend
+   * @param {object} obj
+   */
   const removeFave = (obj) => {
     const tempMap = new Map(faveIdToImage);
     tempMap.delete(obj.id);
