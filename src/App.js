@@ -39,7 +39,7 @@ function App() {
   function updateBackend(user_id, favoriteMap) {
     // Update to the backend
     const tempMapString = mapToString(favoriteMap);
-    fetch(`/api/save_favorite?user_id=${user_id}`, {
+    fetch(`/api/save_favorite?user_id=${user}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
