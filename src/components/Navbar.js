@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 
 const Navbar = ({ faveIdToImage, setFaveIdToImage, handleSubmit }) => {
   // const [faveIdToImage, setFaveIdToImage] = useState(new Map());
-  console.log(faveIdToImage, setFaveIdToImage);
 
   return (
     <div className="Navbar" data-testid="navbar-test">
@@ -24,10 +23,18 @@ const Navbar = ({ faveIdToImage, setFaveIdToImage, handleSubmit }) => {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style={{ color: "white" }}
           >
-            <span className="navbar-toggler-icon"></span>
+            <span
+              className="navbar-toggler-icon"
+              style={{ color: "white" }}
+            ></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div
+            className="collapse navbar-collapse"
+            style={{ color: "white" }}
+            id="navbarNav"
+          >
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link to="/Home" style={{ textDecoration: "none" }}>

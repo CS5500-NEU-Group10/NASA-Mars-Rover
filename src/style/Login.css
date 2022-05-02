@@ -229,4 +229,10 @@ h1 {
   font-size: 24px;
 }
 
+@media all and (max-width:1198px) and (min-width: 400px) {
+  .web-page{
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*# sourceMappingURL=Login.css.map */
