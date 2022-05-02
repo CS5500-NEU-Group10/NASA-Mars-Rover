@@ -6,7 +6,7 @@ import UserNamePasswordEdit from "../components/UserNamePasswordEdit";
 function UserAccount() {
   return (
     <div className="web-page">
-      <div className="account-section">
+      <div className="account-section" data-testid="login-test">
         <h1>Please Log In</h1>
         <UserNamePasswordEdit status="login" />
       </div>
@@ -14,12 +14,4 @@ function UserAccount() {
   );
 }
 
-// UserAccount.propTypes = {
-//   inputUserName: PropTypes.any.isRequired,
-//   setInputUserName: PropTypes.any,
-//   inputPassword: PropTypes.any,
-//   setInputPassword: PropTypes.any,
-//   status: PropTypes.any,
-//   setStatus: PropTypes.any,
-// };
 export default UserAccount;

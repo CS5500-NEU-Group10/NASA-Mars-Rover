@@ -28,7 +28,6 @@ function Main({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
   for (let value of roverToImage.values()) {
     imgs = imgs.concat(value);
   }
-  console.log(imgs);
 
   const [isCButtonActive, setCButtonActive] = useState(false);
   const [isOButtonActive, setOButtonActive] = useState(false);
@@ -56,7 +55,6 @@ function Main({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
           `https://api.nasa.gov/mars-photos/api/v1/rovers/${_rover}/photos?sol=${solDay}&api_key=c1FNqfNYAzqQKjJ6clG3rXbXzXFeCtGbVlZU0O1K`
         )
         .then((res) => {
-          console.log("roverToImage", roverToImage);
           return res.data.photos.filter((i) => {
             if (roverToCamera.get(_rover).includes(i.camera.name)) {
               return true;
@@ -68,7 +66,6 @@ function Main({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
     }
     return [];
   }
-  console.log(roverToCamera);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,15 +82,13 @@ function Main({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
     };
     fetchData();
   }, [solDay, roverToCamera]);
-  console.log(imgs);
+
   /**
    * handleSelectOption function handles the form of the selected cameras in "SelectCamera.js" component
    * @param {*} e is event
    */
   const handleSelectOption = (e) => {
     const { name, checked } = e.target;
-
-    console.log(`${name} is ${checked}`);
 
     // Case 1 : The user checks the box
     if (checked) {
@@ -160,7 +155,6 @@ function Main({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
     setRoverToCamera(tempRover);
 
     setSubmit(true);
-    console.log("Submitted values", camera);
   };
 
   /** handle button functions toggle button activation when Rovers are selected or deselected */
@@ -201,7 +195,6 @@ function Main({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
           handleSubmitData={handleSubmitData}
         />
       )}
-      {/* <Home imgs ={imgs} /> */}
     </div>
   );
 }

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/Navbar.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Navbar = ({ faveIdToImage, setFaveIdToImage, handleSubmit }) => {
-  // const [faveIdToImage, setFaveIdToImage] = useState(new Map());
-
+const Navbar = ({ handleSubmit }) => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
     <div className="Navbar" data-testid="navbar-test">
-      <nav className="navbar navbar-expand-lg navbar-light ">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           <Link to="/" style={{ textDecoration: "none" }}>
             <p className="navbar-brand" id="navbar-brand">
@@ -21,18 +21,23 @@ const Navbar = ({ faveIdToImage, setFaveIdToImage, handleSubmit }) => {
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={!isNavCollapsed ? true : false}
             aria-label="Toggle navigation"
+            onClick={handleNavCollapse}
             style={{ color: "white" }}
           >
             <span
               className="navbar-toggler-icon"
-              style={{ color: "white" }}
+              style={{ backgroundColor: "#800080", color: "white" }}
             ></span>
           </button>
-          <div
-            className="collapse navbar-collapse"
+          {/* <div
+            className="collapse navbar-collapse "
             style={{ color: "white" }}
+            id="navbarNav"
+          > */}
+          <div
+            className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
             id="navbarNav"
           >
             <ul className="navbar-nav">
@@ -71,17 +76,24 @@ const Navbar = ({ faveIdToImage, setFaveIdToImage, handleSubmit }) => {
                   </p>
                 </Link>
               </li>
+              <li className="nav-item">
+                <div className="btn-login nav-link">
+                  <Link to="/Login" style={{ textDecoration: "none" }}>
+                    <button className="main-btn" id="login-btn">
+                      {" "}
+                      Log In{" "}
+                    </button>
+                  </Link>
+                </div>
+              </li>
+              <li className="nav-item">
+                <div className="btn-login nav-link">
+                  <Link to="/SignUp" style={{ textDecoration: "none" }}>
+                    <button className="main-btn"> Sign Up </button>
+                  </Link>
+                </div>
+              </li>
             </ul>
-          </div>
-          <div className="btn-login">
-            <Link to="/Login" style={{ textDecoration: "none" }}>
-              <button className="main-btn"> Log In </button>
-            </Link>
-          </div>
-          <div className="btn-login">
-            <Link to="/SignUp" style={{ textDecoration: "none" }}>
-              <button className="main-btn"> Sign Up </button>
-            </Link>
           </div>
         </div>
       </nav>

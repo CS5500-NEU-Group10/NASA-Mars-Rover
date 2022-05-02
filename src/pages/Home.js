@@ -25,7 +25,6 @@ const Home = ({
             imgs={imgs}
             faveIdToImage={faveIdToImage}
           />
-          {/* <Fave faveIdToImage={faveIdToImage} /> */}
         </div>
       </div>
     </div>

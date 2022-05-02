@@ -6,10 +6,9 @@ import { RiHeartLine, RiHeartFill } from "react-icons/ri";
 
 function Fave({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
   let user = localStorage.getItem("user");
-  console.log("location in fav", setFaveIdToImage);
+
   // let faveIdToImage = location.state["faveIdToImage"];
   let imagesArr = Array.from(faveIdToImage.values());
-  console.log("ImagesARR", imagesArr);
 
   // Recover Map object from string
   // Corresponding to the mapToString function below
@@ -38,22 +37,6 @@ function Fave({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
       setFaveIdToImage(faveItems);
     });
   }, []);
-
-  // /**
-  //  * function that displays the returned images in horizontal pairs
-  //  * @param {*} size, shows the images in a row of size(in this case 2)
-  //  * @param {*} array (the array returned from imgs, from the NASA API key)
-  //  * @returns
-  //  */
-  // function display(size, array) {
-  //   let pairs = [];
-  //   let i = 0;
-  //   while (i < array.length) {
-  //     pairs.push(array.slice(i, (i += size)));
-  //   }
-  //   return pairs;
-  // }
-  // let imagePairs = display(2, imagesArr);
 
   /**
    * function that renders heart icon

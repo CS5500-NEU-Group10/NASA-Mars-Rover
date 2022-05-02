@@ -14,12 +14,4 @@ function SignUp() {
   );
 }
 
-// SignUp.propTypes = {
-//   inputUserName: PropTypes.any.isRequired,
-//   setInputUserName: PropTypes.any,
-//   inputPassword: PropTypes.any,
-//   setInputPassword: PropTypes.any,
-//   status: PropTypes.any,
-//   setStatus: PropTypes.any,
-// };
 export default SignUp;

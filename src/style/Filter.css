@@ -168,6 +168,9 @@ font-size: x-large;
       display: flex;
       flex-direction: column;
     }
+    .btn{
+        font-size:0.8em
+    }
   }
 
 .preferences-checkbox{

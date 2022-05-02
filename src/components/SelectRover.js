@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Filter.css";
-// import { roverCamMap } from "./RoverCam";
+
 import PropTypes from "prop-types";
 
 function SelectRover({
@@ -11,8 +11,6 @@ function SelectRover({
   handleOButton,
   handleSButton,
 }) {
-  console.log("C", isCButtonActive);
-
   return (
     <div className="SelectRover">
       <div className="container">
