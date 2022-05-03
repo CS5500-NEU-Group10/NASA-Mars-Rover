@@ -1,6 +1,6 @@
 package com.cs5500group10.web;
 
-import com.cs5500group10.dto.HomeDto;
+import com.cs5500group10.dto.PreferenceDto;
 import com.cs5500group10.response.MarsRoverApiResponse;
 import com.cs5500group10.service.MarsRoverApiService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,24 +23,24 @@ public class HomeController {
 
     @GetMapping("/")
     public String getHomeView(ModelMap model, Long userId, Boolean createUser) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-        HomeDto homeDto = createDefaultHomeDto(userId);
+        PreferenceDto preferenceDto = createDefaultPreferenceDto(userId);
 
         if (Boolean.TRUE.equals(createUser) && userId == null) {
-            homeDto = roverService.save(homeDto);
+            preferenceDto = roverService.save(preferenceDto);
         } else {
-            homeDto = roverService.findByUserId(userId);
-            if (homeDto == null) {
-                homeDto = createDefaultHomeDto(userId);
+            preferenceDto = roverService.findByUserId(userId);
+            if (preferenceDto == null) {
+                preferenceDto = createDefaultPreferenceDto(userId);
             }
         }
 
-        MarsRoverApiResponse roverData = roverService.getRoverData(homeDto);
+        MarsRoverApiResponse roverData = roverService.getRoverData(preferenceDto);
         model.put("roverData", roverData);
-        model.put("homeDto", homeDto);
-        model.put("validCameras", roverService.getValidCameras().get(homeDto.getMarsApiRoverData()));
-        if (!Boolean.TRUE.equals(homeDto.getRememberPreferences()) && userId != null) {
-            HomeDto defaultHomeDto = createDefaultHomeDto(userId);
-            roverService.save(defaultHomeDto);
+        model.put("preferenceDto", preferenceDto);
+        model.put("validCameras", roverService.getValidCameras().get(preferenceDto.getMarsApiRoverData()));
+        if (!Boolean.TRUE.equals(preferenceDto.getRememberPreferences()) && userId != null) {
+            PreferenceDto defaultPreferenceDto = createDefaultPreferenceDto(userId);
+            roverService.save(defaultPreferenceDto);
         }
 
         return "index";
@@ -48,25 +48,25 @@ public class HomeController {
 
     @GetMapping("/savedPreferences")
     @ResponseBody
-    public HomeDto getSavedPreferences(Long userId) {
+    public PreferenceDto getSavedPreferences(Long userId) {
         if (userId != null)
             return roverService.findByUserId(userId);
         else
-            return createDefaultHomeDto(userId);
+            return createDefaultPreferenceDto(userId);
     }
 
-    private HomeDto createDefaultHomeDto(Long userId) {
-        HomeDto homeDto = new HomeDto();
-        homeDto.setMarsApiRoverData("Opportunity");
-        homeDto.setMarsSol(1);
-        homeDto.setUserId(userId);
-        return homeDto;
+    private PreferenceDto createDefaultPreferenceDto(Long userId) {
+        PreferenceDto preferenceDto = new PreferenceDto();
+        preferenceDto.setMarsApiRoverData("Opportunity");
+        preferenceDto.setMarsSol(1);
+        preferenceDto.setUserId(userId);
+        return preferenceDto;
     }
 
     @PostMapping("/")
-    public String postHomeView(HomeDto homeDto) {
-        homeDto = roverService.save(homeDto);
-        return "redirect:/?userId=" + homeDto.getUserId();
+    public String postHomeView(PreferenceDto preferenceDto) {
+        preferenceDto = roverService.save(preferenceDto);
+        return "redirect:/?userId=" + preferenceDto.getUserId();
     }
 
 }

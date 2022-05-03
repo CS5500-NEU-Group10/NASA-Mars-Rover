@@ -8,35 +8,37 @@ import java.util.List;
  */
 public class MarsRoverApiResponse {
 
-	/** The photos. */
-	List<MarsPhoto> photos = new ArrayList<>();
-	
-	/**
-	 * Gets the photos.
-	 *
-	 * @return the photos
-	 */
-	public List<MarsPhoto> getPhotos() {
-		return photos;
-	}
+    /**
+     * The photos.
+     */
+    List<MarsPhoto> photos = new ArrayList<>();
 
-	/**
-	 * Sets the photos.
-	 *
-	 * @param photos the new photos
-	 */
-	public void setPhotos(List<MarsPhoto> photos) {
-		this.photos = photos;
-	}
+    /**
+     * Gets the photos.
+     *
+     * @return the photos
+     */
+    public List<MarsPhoto> getPhotos() {
+        return photos;
+    }
 
-	/**
-	 * To string.
-	 *
-	 * @return the string
-	 */
-	@Override
-	public String toString() {
-		return "MarsRoverApiResponse [photos=" + photos + "]";
-	}
-	
+    /**
+     * Sets the photos.
+     *
+     * @param photos the new photos
+     */
+    public void setPhotos(List<MarsPhoto> photos) {
+        this.photos = photos;
+    }
+
+    /**
+     * To string.
+     *
+     * @return the string
+     */
+    @Override
+    public String toString() {
+        return "MarsRoverApiResponse [photos=" + photos + "]";
+    }
+
 }
