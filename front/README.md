@@ -1,6 +1,6 @@
 #To start
 
-run```yarn install```
-run ```yarn start```
+run```npm install```
+run ```npm run start```
 
-running on localhost:9080
+The backend address is expected to be localhost:8080
