@@ -114,13 +114,6 @@ const Navbar = ({ handleSubmit, login, setLogin }) => {
                   )}
                 </div>
               </li>
-              <li className="nav-item">
-                <div className="btn-login nav-link">
-                  <Link to="/SignUp" style={{ textDecoration: "none" }}>
-                    <button className="main-btn"> Sign Up </button>
-                  </Link>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
