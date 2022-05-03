@@ -15,6 +15,7 @@ const Navbar = ({ handleSubmit, login, setLogin }) => {
     setLogin(false);
     alert("Logged out!")
     navigate("/Home");
+  }
     
   function signUpRender() {
     return (
