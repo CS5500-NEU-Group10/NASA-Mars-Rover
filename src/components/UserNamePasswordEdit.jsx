@@ -11,7 +11,7 @@ function UserNamePasswordEdit(props) {
   if (props.status === "register") button_text = "Register";
   else if (props.status === "login") button_text = "Login";
 
-  const register = (accountInfoObj) => {
+  const register = async (accountInfoObj) => {
     // Skip if empty or only containing spaces
     if (
       !accountInfoObj.userName ||
@@ -32,13 +32,18 @@ function UserNamePasswordEdit(props) {
       accountInfoObj.userName +
       "&password=" +
       accountInfoObj.password;
-    alert("Registration Completed!");
-    fetch(registerUrl, {
+    let result = await fetch(registerUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
     });
+    let isOk = await result.json();
+    if (isOk === true) {
+      alert("Successfully Registered!");
+    } else {
+      alert("Regitration failed!");
+    }
   };
 
   const login = async (accountInfoObj) => {
@@ -64,7 +69,7 @@ function UserNamePasswordEdit(props) {
       },
     });
     let isOk = await result.json();
-    if (isOk) {
+    if (isOk === true) {
       localStorage.clear();
       localStorage.setItem("user", accountInfoObj.userName);
       alert("Successfully Logged in!");

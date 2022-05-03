@@ -104,7 +104,7 @@ const Navbar = ({ handleSubmit, login, setLogin }) => {
                       className="main-btn"
                       id="login-btn"
                       onClick={logOut}
-                    >Log out</button>
+                    >{localStorage.getItem("user")}<br/>Log out</button>
                   ) : (
                     <Link to="/Login" style={{ textDecoration: "none" }}>
                       <button className="main-btn" id="login-btn">
