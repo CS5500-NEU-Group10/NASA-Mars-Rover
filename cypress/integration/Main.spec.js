@@ -1,6 +1,3 @@
-// import { mount } from "@cypress/react";
-// import Filter from "../../src/pages/Filter";
-// import React from "react";
 //test to check if users are taken to homepage upon clicking the rotating mars sphere
 //and if rovers can be clicked and cameras selected
 describe("renders landing page and interaction with page", () => {

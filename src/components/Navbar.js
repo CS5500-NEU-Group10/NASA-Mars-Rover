@@ -3,7 +3,7 @@ import "../style/Navbar.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Navbar = ({ handleSubmit }) => {
+const Navbar = ({ handleSubmit, login, setLogin }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
@@ -80,8 +80,8 @@ const Navbar = ({ handleSubmit }) => {
                 <div className="btn-login nav-link">
                   <Link to="/Login" style={{ textDecoration: "none" }}>
                     <button className="main-btn" id="login-btn">
-                      {" "}
-                      Log In{" "}
+                      {login ? "Logout" : "Login"}
+                      {console.log("login", login)}
                     </button>
                   </Link>
                 </div>
@@ -105,5 +105,7 @@ Navbar.propTypes = {
   handleSubmit: PropTypes.func,
   faveIdToImage: PropTypes.any,
   setFaveIdToImage: PropTypes.any,
+  login: PropTypes.any,
+  setLogin: PropTypes.any,
 };
 export default Navbar;

@@ -15,6 +15,7 @@ import SignUp from "./pages/SignUp";
 function App() {
   let user = localStorage.getItem("user");
   let [faveIdToImage, setFaveIdToImage] = useState(new Map());
+  const [login, setLogin] = useState(false);
 
   /**
    *  Convert Map object into string
@@ -103,6 +104,8 @@ function App() {
         <Navbar
           faveIdToImage={faveIdToImage}
           setFaveIdToImage={setFaveIdToImage}
+          login={login}
+          setLogin={setLogin}
         />
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -131,7 +134,10 @@ function App() {
           <Route path="/Opportunity" element={<Opportunity />} />
           <Route path="/Curiosity" element={<Curiosity />} />
           <Route path="/Spirit" element={<Spirit />} />
-          <Route path="/Login" element={<UserAccount />} />
+          <Route
+            path="/Login"
+            element={<UserAccount login={login} setLogin={setLogin} />}
+          />
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       </BrowserRouter>

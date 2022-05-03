@@ -86,6 +86,7 @@ function UserNamePasswordEdit(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.setLogin(true);
     const accountInfoObj = {
       userName: inputUserName,
       password: inputPassword,
@@ -128,6 +129,7 @@ function UserNamePasswordEdit(props) {
 
 UserNamePasswordEdit.propTypes = {
   status: PropTypes.string,
+  setLogin: PropTypes.func,
 };
 
 export default UserNamePasswordEdit;
