@@ -6,6 +6,16 @@ import PropTypes from "prop-types";
 const Navbar = ({ handleSubmit, login, setLogin }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
+  function signUpRender() {
+    return (
+      <div className="btn-login nav-link">
+        <Link to="/SignUp" style={{ textDecoration: "none" }}>
+          <button className="main-btn"> Sign Up </button>
+        </Link>
+      </div>
+    );
+  }
   return (
     <div className="Navbar" data-testid="navbar-test">
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -76,20 +86,14 @@ const Navbar = ({ handleSubmit, login, setLogin }) => {
                   </p>
                 </Link>
               </li>
+              <li className="nav-item">{login ? "" : signUpRender()}</li>
               <li className="nav-item">
                 <div className="btn-login nav-link">
                   <Link to="/Login" style={{ textDecoration: "none" }}>
                     <button className="main-btn" id="login-btn">
                       {login ? "Logout" : "Login"}
-                      {console.log("login", login)}
+                      {console.log("Login", login)}
                     </button>
-                  </Link>
-                </div>
-              </li>
-              <li className="nav-item">
-                <div className="btn-login nav-link">
-                  <Link to="/SignUp" style={{ textDecoration: "none" }}>
-                    <button className="main-btn"> Sign Up </button>
                   </Link>
                 </div>
               </li>

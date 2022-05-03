@@ -110,7 +110,9 @@
         2px 0 8px #0ff;
     }
 
-   
+   .welcome{
+      margin-left: 10%;
+   }
     /* .nav-link {
         position: absolute;
         top: 0;
