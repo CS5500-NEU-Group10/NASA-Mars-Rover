@@ -2,11 +2,20 @@ import React, { useState } from "react";
 import "../style/Navbar.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ handleSubmit, login, setLogin }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-
+  const navigate = useNavigate();
+  
+  function logOut() {
+    localStorage.clear();
+    localStorage.setItem("user", "");
+    setLogin(false);
+    alert("Logged out!")
+    navigate("/Home");
+    
   function signUpRender() {
     return (
       <div className="btn-login nav-link">
@@ -89,11 +98,25 @@ const Navbar = ({ handleSubmit, login, setLogin }) => {
               <li className="nav-item">{login ? "" : signUpRender()}</li>
               <li className="nav-item">
                 <div className="btn-login nav-link">
-                  <Link to="/Login" style={{ textDecoration: "none" }}>
-                    <button className="main-btn" id="login-btn">
-                      {login ? "Logout" : "Login"}
-                      {console.log("Login", login)}
-                    </button>
+                  {login ? (
+                    <button
+                      className="main-btn"
+                      id="login-btn"
+                      onClick={logOut}
+                    >Log out</button>
+                  ) : (
+                    <Link to="/Login" style={{ textDecoration: "none" }}>
+                      <button className="main-btn" id="login-btn">
+                        Log In
+                      </button>
+                    </Link>
+                  )}
+                </div>
+              </li>
+              <li className="nav-item">
+                <div className="btn-login nav-link">
+                  <Link to="/SignUp" style={{ textDecoration: "none" }}>
+                    <button className="main-btn"> Sign Up </button>
                   </Link>
                 </div>
               </li>

@@ -68,6 +68,7 @@ function UserNamePasswordEdit(props) {
       localStorage.clear();
       localStorage.setItem("user", accountInfoObj.userName);
       alert("Successfully Logged in!");
+      props.setLogin(true);
       navigate("/Home");
     } else {
       alert("Login Failed!");
@@ -86,7 +87,6 @@ function UserNamePasswordEdit(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.setLogin(true);
     const accountInfoObj = {
       userName: inputUserName,
       password: inputPassword,

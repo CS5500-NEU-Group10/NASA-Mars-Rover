@@ -23,6 +23,9 @@ function Fave({ faveIdToImage, setFaveIdToImage, addFave, removeFave }) {
   }
 
   async function fetchFaveData() {
+    if (user == "") {
+      return new Map([]);
+    }
     const result = await fetch(`/api/get_favorite/${user}`, {
       method: "GET",
     });
