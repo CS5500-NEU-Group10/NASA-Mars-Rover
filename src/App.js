@@ -15,7 +15,7 @@ import SignUp from "./pages/SignUp";
 function App() {
   let user = localStorage.getItem("user");
   let [faveIdToImage, setFaveIdToImage] = useState(new Map());
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(user !== "");
 
   /**
    *  Convert Map object into string
